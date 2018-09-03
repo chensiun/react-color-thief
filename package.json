@@ -1,0 +1,31 @@
+{
+  "name": "react-color-thief",
+  "version": "1.0.0",
+  "description": "A React component for grabbing the color palette from an image.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline --colors --content-base ./build",
+    "build": "webpack --progress --colors"
+  },
+  "keywords": [
+    "image-color"
+  ],
+  "author": "chensiun",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^4.17.1",
+    "webpack-dev-server": "^3.1.7"
+  }
+}
