@@ -24,7 +24,6 @@ db.json
 src/cytron_rollup.js
 
 public/build
-dist/
 build/
 esdocs/
 docsAPI/
