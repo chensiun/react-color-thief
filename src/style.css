@@ -46,3 +46,40 @@ body {
   background-color: rgba(255,255,255,0.2);
   border-color: rgba(255,255,255,0.3);
 }
+.itemRoot {
+  width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.itemRoot img {
+  width: 500px;
+  height: 100%;
+  float: left;
+  border-radius: 8px;
+}
+.mes {
+  width: 200px;
+  height: 100%;
+  float: right;
+  text-align: center;
+}
+.mesTitle {
+  color: #222;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+}
+.topBlock, .bottomBlock {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  color: #777;
+  font-size: 12px;
+  margin: 0 auto;
+  white-space: nowrap;
+  border-radius: 2px;
+}
+.bottomBlock {
+  margin-bottom: 10px;
+}
