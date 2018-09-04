@@ -1,8 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import ColorThief from './ColorThief'
+import './style.css'
 
-import testImg from './testImg.jpg'
+import ColorThief from './ColorThief'
+import testImg from './assets/testImg.jpg'
 
 class App extends React.Component {
   constructor(props) {
@@ -22,9 +23,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <img style={{ width: '400px', height: '300px' }} id='img' src={testImg}/>
-        <div style={{ width: '100px', height: '100px', background: this.state.rgb}}></div>
+      <div className='root'>
+        <div className='head'>
+          <div className='title'>React Color Thief</div>
+          <div className='desc'>A React component for grabbing the color palette from an image<br/>一个提取图片主要颜色的React组件</div>
+          <a className='btn' href='https://github.com/chensiun/react-color-thief'>View on GitHub</a>
+        </div>
       </div>
     )
   }
