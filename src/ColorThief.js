@@ -57,7 +57,7 @@ export default class ColorThief {
 
   /*
   * getColor(sourceImage[, quality])
-  * returns {r: num, g: num, b: num}
+  * returns [r(num), g(num), b(num)]
   *
   * Use the median cut algorithm provided by quantize.js to cluster similar
   * colors and return the base color from the largest cluster.
@@ -75,7 +75,7 @@ export default class ColorThief {
 
   /*
   * getPalette(sourceImage[, colorCount, quality])
-  * returns array[ {r: num, g: num, b: num}, {r: num, g: num, b: num}, ...]
+  * returns array[ [r(num), g(num), b(num)], [r(num), g(num), b(num)], ...]
   *
   * Use the median cut algorithm provided by quantize.js to cluster similar colors.
   *
