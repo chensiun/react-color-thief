@@ -6,6 +6,7 @@ import ColorThief from './ColorThief'
 import demo1 from './assets/demo5.jpg'
 import demo2 from './assets/demo4.jpg'
 import demo3 from './assets/demo6.jpg'
+import closeSvg from './assets/close.svg'
 
 class App extends React.Component {
   constructor(props) {
@@ -47,6 +48,15 @@ class App extends React.Component {
           src={img}
           onLoad={() => this.thiefPalette(index)}
         />
+        { index === 3 && [
+          <div
+            key='closeBtn'
+            className='close'
+            style={{ backgroundImage: `url(${closeSvg})` }}
+            onClick={() => this.setState({ localUrl: '' })}
+          ></div>,
+          <div key='mask' className='mask'></div>
+        ]}
         <div className='mes'>
           <div className='mesTop'>
             <div className='mesTitle'>Dominant Color</div>
@@ -71,8 +81,32 @@ class App extends React.Component {
     )
   }
 
+  preventDefault = evt => {
+    evt.preventDefault()
+		evt.stopPropagation()
+  }
+
+  onDrop = evt => {
+    this.preventDefault(evt)
+    const files = evt.dataTransfer.files
+    const localUrl = window.URL.createObjectURL(files[0])
+    
+    this.setState({ localUrl })
+  }
+
+  onInput = evt => {
+    this.$input.click(evt)
+  }
+
+  onChange = evt => {
+    const files = evt.target.files
+    const localUrl = window.URL.createObjectURL(files[0])
+    
+    this.setState({ localUrl })
+  }
+
   render() {
-    const { colors, palettes } = this.state
+    const { colors, palettes, localUrl } = this.state
 
     return (
       <div className='root'>
@@ -85,6 +119,20 @@ class App extends React.Component {
           [demo1, demo2, demo3].map((demo, index) => {
             return this.getItem(demo, index, colors[index], palettes[index])
           })
+        }
+        <div className='line'></div>
+        { localUrl ?
+          this.getItem(localUrl, 3, colors[3], palettes[3]) :
+          <div className='itemRoot'>
+            <input ref={dom => { this.$input = dom }} className='input' type='file' onChange={this.onChange}/>
+            <div
+              className='userInput'
+              onDragEnter={this.preventDefault}
+              onDragOver={this.preventDefault}
+              onDrop={this.onDrop}
+              onClick={this.onInput}
+            >你也可以把图片拖拽到这里</div>
+          </div>
         }
       </div>
     )
