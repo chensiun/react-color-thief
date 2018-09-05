@@ -24,8 +24,8 @@ colorThief.getPalette(sourceImage, 8) //sourceImage是一个img元素，且需�
 
 | function | returns |
 | --------|-------------|
-| `getColor(imageDom[, quality])` | [r, g, b] |
-| getPalette(imageDom[, colorCount, quality]) | [ [r, g, b], [r, g, b], ...] |
-| getColorFromUrl(imageUrl[, quality]) | [r, g, b] |
-| getColorAsync(imageUrl[, quality]) | [r, g, b] |
-| convertColorRgb(rgbArray) | "rgb(r, g, b)" |
+| `getColor(imageDom[, quality])` | `[r, g, b]` |
+| `getPalette(imageDom[, colorCount, quality])` | `[ [r, g, b], [r, g, b], ...]` |
+| `getColorFromUrl(imageUrl[, quality])` | `[r, g, b]` |
+| `getColorAsync(imageUrl[, quality])` | `[r, g, b]` |
+| `convertColorRgb(rgbArray)` | `"rgb(r, g, b)"` |
