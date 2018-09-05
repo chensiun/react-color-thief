@@ -1,6 +1,6 @@
 # React-Color-Thief
 🎨 A React component for grabbing the color palette from an image. [See a Demo](https://chensiun.github.io/react-color-thief/)
-  >It is based on Lokesh's color-thief [library](https://github.com/lokesh/color-thief/).
+  >It is based on Lokesh's [color-thief](https://github.com/lokesh/color-thief/).
 
 ## How to use
 可以把src/ColorThief.js文件拷贝到自己的项目下，直接使用。
